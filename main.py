@@ -677,9 +677,9 @@ class OdnomastkaD_DurakWithWeights(OdnomastkaDurakWithWeights):
 
 
 def example():
-    cards = [1, 0, 0, 1]
-    weights = [-1, -1, -1, -1]
-    first = 1
+    cards = [0, 1, 0, 1, 0, 1]
+    weights = [1, 2, 3, 4, 5, 6]
+    first = 0
     game = OdnomastkaDurakWithWeights(cards, first, weights)
     print("Выиграет игрок:", game.who_wins(), "\nС счетом:", game.winning_score(),
           "\nОптимальные ходы:", game.good_moves(), "\nЛовля взятие:", game.catching_the_take(),
@@ -688,5 +688,3 @@ def example():
         t = game.move_by_computer()
         print("Ход:", t)
         game.print()
-
-
